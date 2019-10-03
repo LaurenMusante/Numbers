@@ -14,5 +14,16 @@ namespace Converter.Test
         {
             Assert.AreEqual("Numerical input only! Please try again.", testNumberConverter.ConvertToWords("ten"));
         }
+
+        [TestMethod]
+        public void ConvertToWords_ConvertSingleDigit_five()
+        {
+            Assert.AreEqual("five", testNumberConverter.ConvertToWords("5"));
+        }
+        [TestMethod]
+        public void ConvertToWords_ConvertDoubleDigit_twentytwo()
+        {
+        Assert.AreEqual("twentytwo", testNumberConverter.ConvertToWords("22"));
+        }
     }
 }
